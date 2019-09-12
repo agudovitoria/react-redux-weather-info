@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, Button, Grid } from '@material-ui/core';
+import { Card, CardContent, CardActions, Typography, Button, CardHeader } from '@material-ui/core';
 import { LocationInput } from './LocationInput/LocationInput.component';
 import Icon from '@material-ui/core/Icon';
 
@@ -22,57 +22,17 @@ export const WeatherInfoCard = (props) => {
 
   return (
     <Card className={classes.card}>
+      <CardHeader title={ 'Search & select location' }></CardHeader>
       <CardContent>
-        <Grid
-          container
-          spacing={1}
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
-          <Grid item xs={12}>
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-            >
-              <Grid item xs={12}>
-                <Typography component="h5" variant="h5">
-                  Search & select location
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <LocationInput></LocationInput>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid
-              container
-              direction="row"
-              justify="center"
-              alignItems="center"
-            >
-              <Grid item>
-                <Button variant="contained" color="primary" className={classes.button}>
-                  Search
-                  <Icon className={classes.icon}>search</Icon>
-                </Button>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+        <LocationInput></LocationInput>
       </CardContent>
+      <CardActions>
+        <Button variant='contained' color='primary' className={classes.button}>
+          Search
+          <Icon className={classes.icon}>search</Icon>
+        </Button>
+      </CardActions>
+
     </Card>
   );
 };
