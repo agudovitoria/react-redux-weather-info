@@ -1,3 +1,6 @@
+@import '../node_modules/open-weather-icons/dist/css/open-weather-icons.css';
+@import '../node_modules/weather-icons/css/weather-icons.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +8,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
